@@ -3,14 +3,14 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void SIGINTHandler(int signum)
+void SIGALRMHandler(int signum)
 {
   exit(EXIT_SUCCESS);
 }
 
 int main()
 {
-  signal(SIGINT, SIGINTHandler);
+  signal(SIGALRM, SIGALRMHandler);
 
   alarm(30);
 
