@@ -8,8 +8,8 @@
 3. - Signaalit: Prosessi voi lähettää/vastaanottaa käyttöjärjestelmässä valmiiksi määriteltyjä
                 signaaleja.
    - "Pipe": Prosessin output voidaan ohjata toiselle prosessille.
-   - Viestijono: Prosessi voi lisätä viestejä erilliseen viestijonototeutukseen (esim. tietokanta,
-     Redis), jotka toinen prosessi voi käsitellä.
+   - Viestijono: Prosessi voi lisätä viestejä erilliseen viestijonototeutukseen (esim. posix mq,
+     tietokanta, Redis), jotka toinen prosessi voi käsitellä.
    - Jaettu muisti: Prosessit voivat lukea ja kirjoittaa jaettuun muistialueeseen.
    - Soketit: Kommunikaatio toteutetaan verkkotoimintojen avulla.
 
