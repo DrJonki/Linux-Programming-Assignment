@@ -1,0 +1,20 @@
+1. Linuxissa säikeitä käsitellään pthread-kirjaston kautta. Säikeellä ei ole prosessin tavoin
+   omaa osoiteavaruutta, vaan se on jaettu parent-säikeen kanssa. Säikeillä on kuitenkin oma 
+   stack-muistinsa.
+
+2. Linux tukee kaikkia posix-signaaleja. Signaalien avulla sovellus voi reagoida tapahtumiin,
+   jotka tulevat joko ulkopuolelta tai lapsiprosesseilta.
+
+3. - Signaalit: Prosessi voi lähettää/vastaanottaa käyttöjärjestelmässä valmiiksi määriteltyjä
+                signaaleja.
+   - "Pipe": Prosessin output voidaan ohjata toiselle prosessille.
+   - Viestijono: Prosessi voi lisätä viestejä erilliseen viestijonototeutukseen (esim. tietokanta,
+     Redis), jotka toinen prosessi voi käsitellä.
+   - Jaettu muisti: Prosessit voivat lukea ja kirjoittaa jaettuun muistialueeseen.
+   - Soketit: Kommunikaatio toteutetaan verkkotoimintojen avulla.
+
+4. Soketti on virtuaalinen väylä tietokoneen verkkolaitteiston käyttämiseen. Soketteja tarvitaan
+   sovelluksissa, jotka toteuttavat verkko-ominaisuuksia. Soketteja voi käyttää myös samassa
+   ympäristössä ajettavien prosessien kommunikaatioon.
+
+5. Systeemiloki on keskitetty mekanismi lokiviestien tallennukseen ja käsittelyyn.
